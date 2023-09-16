@@ -19,27 +19,54 @@
   }
   
   .container div {
-    padding: 15px;
+    
     font-family: Helvetica;
     font-weight: bold;
+  }
+
+  .container > div:not(.header) {
+    padding: 15px;
   }
   
   .header {
     grid-column: 2 / 3;
     grid-template-columns: 1fr 2fr;
-    display: grid;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
+    gap: 24px;
+    padding: 10px 15px 10px 15px;
+    margin-left: 15px;
+  }
+
+  .bar{
+    display: flex;
     gap: 200px;
-    align-items: center;
-    box-shadow: 0px 3px lightgrey;
+    padding: 0px;
+  }
+
+  .buttons{
+    
+  }
+
+  .buttons button{
+    background-color: #1892d3;
+    color: white;
+    border: 0px;
+    border-radius: 48px;
+    padding: 15px 40px 15px 40px;
+    margin: 8px;
+    font-weight: bold;
   }
 
   .search-bar, .account{
     padding: 0px;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: 24px;
+    gap: 8px;
   }
 
   .account{
@@ -76,6 +103,10 @@
     gap: 30px;
     box-shadow: 0px 3px lightgrey;
   }
+
+  .sidebar div{
+    padding: 15px;
+  }
   
   .sidebar .photo {
     color: white;
@@ -102,25 +133,17 @@
     align-items: center;
   }
   
-  .nav {
-    background-color: #C50208;
-  }
-  
-  .nav ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .nav ul li {
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  
   .article {
+    grid-row: 2 / 4;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
     background-color: #bccbde;
+  }
+
+  .article div{
+    padding: 15px;
   }
   
   .article p {
@@ -155,4 +178,5 @@
   .footer p {
     font-size: 13px;
     font-weight: normal;
+    color: white;
   }
