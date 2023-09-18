@@ -7,6 +7,11 @@
     list-style-type: none;
   }
 
+  hr{
+    width: 50%;
+    margin: auto;
+  }
+
   .iconify{
     width: 30px;
     height: 30px;
@@ -15,7 +20,6 @@
   .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    text-align: center;
   }
   
   .container div {
@@ -45,10 +49,6 @@
     display: flex;
     gap: 200px;
     padding: 0px;
-  }
-
-  .buttons{
-    
   }
 
   .buttons button{
@@ -137,8 +137,8 @@
     grid-row: 2 / 4;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 500px 1fr;
     background-color: #bccbde;
   }
 
@@ -158,6 +158,32 @@
     color: black;
     text-align: center;
   }
+
+  .projects{
+    grid-row: 1 / 2;
+  }
+
+  .announcement .card p{
+    text-align: left;
+  }
+
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+  }
+
+  .articlecard{
+    position: relative;  
+    border-left: 8px solid #efb527;
+    border-radius: 8px;
+  }
+  
+  .trending{
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
   
   .card p {
     color: black;
@@ -168,6 +194,12 @@
   .card .title {
     font-size: 18px;
     text-align: center;
+  }
+
+  .card-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
   
   .footer {
